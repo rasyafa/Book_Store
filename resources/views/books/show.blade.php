@@ -16,11 +16,11 @@
             <div class="col-md-8">
                 <div class="card-body">
                     <h5 class="card-title">{{ $book->name }}</h5>
-                    <p class="card-text"><strong>Price:</strong> ${{ number_format($book->price, 2) }}</p>
+                    <p class="card-text"><strong>Price:</strong> Rp{{ number_format($book->price, 2) }}</p>
                     <p class="card-text"><strong>Stock:</strong> {{ $book->stock }}</p>
                     <p class="card-text"><strong>Discount:</strong> {{ $book->discount }}%</p>
                     @if($book->discount > 0)
-                    <p class="card-text"><strong>Discounted Price:</strong> ${{ number_format($book->price * (1 -
+                    <p class="card-text"><strong>Discounted Price:</strong> Rp{{ number_format($book->price * (1 -
                         $book->discount / 100), 2) }}</p>
                     @endif
                     <p class="card-text"><small class="text-muted">Last updated: {{ $book->updated_at->diffForHumans()
