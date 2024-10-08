@@ -31,6 +31,7 @@
                     <th>No.</th>
                     <th>Image</th>
                     <th>Book Name</th>
+                    <th>Description</th>
                     <th>Price</th>
                     <th>Stock</th>
                     <th>Actions</th>
@@ -48,6 +49,7 @@
                         @endif
                     </td>
                     <td>{{ $book->name }}</td>
+                    <td>{{ Str::limit($book->description, 40) }}</td>
                     <td>
                         @if($book->discount > 0)
                         <del>Rp{{ number_format($book->price, 2) }}</del><br>

@@ -16,6 +16,7 @@
             <div class="col-md-8">
                 <div class="card-body">
                     <h5 class="card-title">{{ $book->name }}</h5>
+                    <p class="card-text"><strong>Description:</strong> {{ $book->description }}</p>
                     <p class="card-text"><strong>Price:</strong> Rp{{ number_format($book->price, 2) }}</p>
                     <p class="card-text"><strong>Stock:</strong> {{ $book->stock }}</p>
                     <p class="card-text"><strong>Discount:</strong> {{ $book->discount }}%</p>
